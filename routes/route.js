@@ -5,9 +5,13 @@ module.exports = function(app) {
 
     //==============================================================================//
     //====================================== RESTful APIs ==========================//
+    //=== POST                ==>  http://localhost:port/post/resultdata         ===//
     //=== GET                 ==>  http://localhost:port/get/resultdata          ===//
     //=== GET(Spesific)       ==>  http://localhost:port/get/resultdata/{id}     ===//
     //==============================================================================//
+
+    // Post data to database
+    app.post('/post/resultdata', resultdata.create);
     // Retrieve all data
     app.get('/get/resultdata', resultdata.findAll);
  

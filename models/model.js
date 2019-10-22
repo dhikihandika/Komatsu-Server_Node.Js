@@ -17,7 +17,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       result_presentase: {
       type: Sequelize.INTEGER
-      }
+      },
     });
     
     return dbModel;
