@@ -1,5 +1,10 @@
+/*
+Aothuor : dhkihandika
+Date    : 21/10/2019
+*/
+
 module.exports = (sequelize, Sequelize) => {
-    const dbModel = sequelize.define('dataresults', {                           // 'result' is table name of database
+    const dbModel = sequelize.define('resultdata', {                           // 'dataresult' is table name of database
       nama_op: {
       type: Sequelize.STRING
       },

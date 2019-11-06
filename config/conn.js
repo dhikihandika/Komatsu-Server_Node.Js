@@ -1,8 +1,13 @@
+/*
+Aothuor : dhkihandika
+Date    : 21/10/2019
+*/
+
 const conn = {
-    database: 'sql12307664',
-    username: 'sql12307664',
-    password: 'WkQKAINMsc',
-    host: 'sql12.freesqldatabase.com',
+    database: 'db_vision',
+    username: 'root',
+    password: '',
+    host: '192.168.1.21',
     dialect: 'mysql',
     pool: {
       max: 5,

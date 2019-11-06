@@ -1,5 +1,9 @@
+/*
+Aothuor : dhkihandika
+Date    : 21/10/2019
+*/
+
 const conn = require('./conn.js');
- 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(conn.database, conn.username, conn.password, {         
   host: conn.host,

@@ -1,6 +1,10 @@
+/*
+Aothuor : dhkihandika
+Date    : 21/10/2019
+*/
+
 const db = require('../config/config.js');
 const ResultData = db.resultdata;                                   // "db" take from ./models/model.js
-const { validationResult } = require ('express-validator');
 
 // ------------------------------------------------------ POST a DataVawt to database ------------------------------------------------------------------//
 exports.create = (req, res) => {  
@@ -26,12 +30,12 @@ exports.create = (req, res) => {
  
 // ------------------------------------------------------------ FETCH all ResultData ---------------------------------------------------------------------//
 exports.findAll = (req, res) => {
-  ResultData.findAll().then(resultdata => {
-    // Send all customers to Client
-    //let name="data";
-    //let tick=JSON.stringify(name);
-    //let tack=JSON.stringify(ResultData)
-    //res.send("{" + tick + ":" + tack + "}");
+  ResultData.findAll({
+    limit: 10,                                                                 
+    where: {                                                         
+    },                                                              // your where conditions, or without them if you need ANY entry
+    order: [ [ 'id', 'DESC' ]]                               // Limit from DESC
+  }).then(resultdata => {
     res.send(resultdata);
   });
 };
