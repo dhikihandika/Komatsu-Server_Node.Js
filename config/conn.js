@@ -7,7 +7,7 @@ const conn = {
     database: 'db_vision',
     username: 'root',
     password: '',
-    host: '192.168.1.21',
+    host: 'localhost',
     dialect: 'mysql',
     pool: {
       max: 5,
